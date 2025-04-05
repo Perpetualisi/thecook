@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './magazine.css';
+import './Magazine.css';
 
 const Magazine = () => {
   return (
