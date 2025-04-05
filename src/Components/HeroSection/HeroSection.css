@@ -1,19 +1,16 @@
-
 body, html {
-    overflow: hidden; 
     margin: 0;
     padding: 0;
     height: 100%;
   }
   
-  
   .hero {
     display: flex;
-    height: 100vh; 
+    height: 100vh;
     background-color: #003333;
     color: white;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden; /* Prevents both x and y scroll only within HeroSection */
   }
   
   .hero-left {
@@ -80,11 +77,12 @@ body, html {
     }
   }
   
-  
+  /* ================== MOBILE RESPONSIVENESS ================== */
   @media (max-width: 768px) {
     .hero {
       flex-direction: column;
-      height: auto; 
+      height: auto;
+      overflow: hidden; /* Ensure no scroll in HeroSection on small screens */
     }
   
     .hero-left {
