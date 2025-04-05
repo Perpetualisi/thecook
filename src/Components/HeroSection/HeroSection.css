@@ -2,51 +2,54 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-  }
-  
-  .hero {
+}
+
+.hero {
     display: flex;
     height: 100vh;
     background-color: #003333;
     color: white;
     position: relative;
-    overflow: hidden; /* Prevents both x and y scroll only within HeroSection */
-  }
-  
-  .hero-left {
+    overflow: hidden; 
+}
+
+.hero-left {
     flex: 1;
     position: relative;
     overflow: hidden;
-  }
-  
-  .hero-left img {
+}
+
+.hero-left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: opacity 1s ease-in-out;
-  }
-  
-  .hero-right {
+}
+
+.hero-right {
     flex: 1;
     padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #003333;
-  }
-  
-  .hero-right h1 {
+}
+
+.hero-right h1 {
     font-size: 2.5rem;
     font-style: italic;
-  }
-  
-  .hero-right p {
+    line-height: 1.2; /* Ensures better line spacing */
+    margin-bottom: 1rem; /* Adds some space below the title */
+}
+
+.hero-right p {
     margin-top: 1rem;
     font-size: 1rem;
     line-height: 1.6;
-  }
-  
-  .cta {
+    margin-bottom: 1.5rem; /* Adds some space below the paragraph */
+}
+
+.cta {
     background-color: goldenrod;
     color: white;
     border: none;
@@ -56,68 +59,72 @@ body, html {
     transform: rotate(-5deg);
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .cta:hover {
+    width: fit-content; /* Ensures button width is adjusted based on content */
+}
+
+.cta:hover {
     background-color: #daa520;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     font-size: 2rem;
     margin-top: 2rem;
     animation: bounce 1.5s infinite;
-  }
-  
-  @keyframes bounce {
+}
+
+@keyframes bounce {
     0%, 100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     50% {
-      transform: translateX(10px);
+        transform: translateX(10px);
     }
-  }
-  
-  /* ================== MOBILE RESPONSIVENESS ================== */
-  @media (max-width: 768px) {
+}
+
+/* ================== MOBILE RESPONSIVENESS ================== */
+@media (max-width: 768px) {
     .hero {
-      flex-direction: column;
-      height: auto;
-      overflow: hidden; /* Ensure no scroll in HeroSection on small screens */
+        flex-direction: column;
+        height: auto;
+        padding: 1rem; /* Adds some padding for better spacing on mobile */
     }
-  
+
     .hero-left {
-      order: 2;
-      width: 100%;
-      height: 250px;
+        order: 2;
+        width: 100%;
+        height: 250px;
     }
-  
+
     .hero-left img {
-      height: 100%;
-      object-fit: cover;
+        height: 100%;
+        object-fit: cover;
     }
-  
+
     .hero-right {
-      order: 1;
-      padding: 2rem;
-      text-align: center;
-      width: 100%;
+        order: 1;
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding is accounted for in width */
     }
-  
+
     .hero-right h1 {
-      font-size: 1.8rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
-  
+
     .hero-right p {
-      font-size: 0.95rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem; 
     }
-  
+
     .cta {
-      font-size: 0.95rem;
-      padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem; 
+        margin-top: 1.5rem;
     }
-  
+
     .arrow {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-  }
-  
+}
