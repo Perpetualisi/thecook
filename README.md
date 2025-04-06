@@ -1,17 +1,24 @@
-# Cook - Recipe App
 
-Welcome to the Cook recipe app, where you can explore and discover a variety of delicious homemade recipes! This app is built with **React** and **Vite**, offering fast development and production builds.
 
-## Features
+   ## TheCook - Recipe App
+
+Welcome to the **TheCook** recipe app, where you can explore and discover a variety of delicious homemade recipes! This app is built with **React** and **Vite**, offering fast development and production builds.
+
+ Features
 - **Image Slider:** Showcases a collection of food images, changing every 3 seconds.
 - **Explore Recipes Button:** Takes you to a section where you can explore different recipes.
 - **Responsive Design:** The app is designed to be fully responsive, adapting to different screen sizes.
 - **Fast Refresh:** Built with **Vite** for rapid development and testing.
-  
+
 ## Technologies Used
 - **React**: JavaScript library for building user interfaces.
 - **Vite**: Fast development and build tool for modern web projects.
 - **CSS**: For styling and layout of the app.
+
+## Live Demo
+
+You can check out the live demo of the app here:  
+[Cook Recipe App - Live Demo](https://magnificent-cupcake-e7c695.netlify.app/)
 
 ## Installation
 
@@ -20,3 +27,44 @@ Follow these steps to set up the project locally:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/cook.git
+   ```
+
+2. **Navigate into the project directory**:
+   ```bash
+   cd cook
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Run the app locally**:
+   ```bash
+   npm run dev
+   ```
+
+After running this command, the app will be available at `http://localhost:3000` in your browser.
+
+## Build for Production
+
+To create a production build of the app, run the following command:
+
+```bash
+npm run build
+```
+
+This will generate the `dist` folder, which contains the optimized production files.
+
+## Contributing
+
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
