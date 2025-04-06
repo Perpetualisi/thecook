@@ -24,7 +24,7 @@ const Store = () => {
         <div className="product">
           <h2>Product 3: Gourmet Spice Set</h2>
           <p>Our gourmet spice set includes a variety of hand-picked, high-quality spices from around the world. Perfect for adding flavor and depth to your dishes!</p>
-          <img src="/Gourmet Spice Set.jpg" alt="Gourmet Spice Set" />
+          <img src="/GourmetSpiceSet.jpg" alt="Gourmet Spice Set" />
         </div>
       </div>
     </div>
