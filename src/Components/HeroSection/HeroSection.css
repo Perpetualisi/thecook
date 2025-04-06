@@ -12,6 +12,7 @@ body, html {
     position: relative;
     overflow: hidden; 
 }
+  
 
 .hero-left {
     flex: 1;
@@ -24,6 +25,7 @@ body, html {
     height: 100%;
     object-fit: cover;
     transition: opacity 1s ease-in-out;
+    opacity: 1;
 }
 
 .hero-right {

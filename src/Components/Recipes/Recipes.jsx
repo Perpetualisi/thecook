@@ -6,17 +6,17 @@ const Recipes = () => {
     {
       title: 'Classic Spaghetti Bolognese',
       description: 'A rich and savory Italian dish made with ground beef, tomatoes, and herbs.',
-      image: '/Spaghetti Bolognese.jpg',
+      image: '/SpaghettiBolognese.jpg',
     },
     {
       title: 'Creamy Chicken Alfredo',
       description: 'Tender chicken breast in a creamy parmesan sauce over fettuccine pasta.',
-      image: '/Creamy Chicken Alfredo.jpg',
+      image: '/CreamyChickenAlfredo.jpg',
     },
     {
       title: 'Vegetable Stir-Fry',
       description: 'Colorful veggies sautéed in a delicious garlic soy sauce.',
-      image: '/Vegetable Stir.jpg',
+      image: '/VegetableStir.jpg',
     },
   ];
 

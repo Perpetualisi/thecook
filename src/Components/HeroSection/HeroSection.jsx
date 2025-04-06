@@ -10,11 +10,12 @@ const HeroSection = () => {
 
   
   const images = [
-    '/cook (1).jpg',
-    '/cook (2).jpg',
-    '/cook (3).jpg',
-    '/cook (4).jpg',
+    '/cook1.jpg',
+    '/cook2.jpg',
+    '/cook3.jpg',
+    '/cook4.jpg',
   ];
+  
 
   
   useEffect(() => {

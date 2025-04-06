@@ -12,7 +12,7 @@ const Magazine = () => {
 
       <div className="magazine-content">
         <div className="magazine-item">
-          <img src="/Delicious Apple Pie.jpg" alt="Recipe 1" className="magazine-image" />
+          <img src="/DeliciousApplePie.jpg" alt="Recipe 1" className="magazine-image" />
           <div className="magazine-text">
             <h2>Delicious Apple Pie</h2>
             <p>A step-by-step guide to baking the perfect apple pie from scratch.</p>
@@ -21,7 +21,7 @@ const Magazine = () => {
         </div>
 
         <div className="magazine-item">
-          <img src="/Homemade Pasta.jpg" alt="Recipe 2" className="magazine-image" />
+          <img src="/HomemadePasta.jpg" alt="Recipe 2" className="magazine-image" />
           <div className="magazine-text">
             <h2>Homemade Pasta</h2>
             <p>Learn how to make fresh, homemade pasta that will elevate any dish.</p>
@@ -30,7 +30,7 @@ const Magazine = () => {
         </div>
 
         <div className="magazine-item">
-          <img src="/Perfect Chocolate Cake.jpg" alt="Recipe 3" className="magazine-image" />
+          <img src="/Chocolatecake.jpg" alt="Recipe 3" className="magazine-image" />
           <div className="magazine-text">
             <h2>Perfect Chocolate Cake</h2>
             <p>Indulge in a rich, decadent chocolate cake that's perfect for any occasion.</p>
