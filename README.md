@@ -1,8 +1,22 @@
-# React + Vite
+# Cook - Recipe App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Cook recipe app, where you can explore and discover a variety of delicious homemade recipes! This app is built with **React** and **Vite**, offering fast development and production builds.
 
-Currently, two official plugins are available:
+## Features
+- **Image Slider:** Showcases a collection of food images, changing every 3 seconds.
+- **Explore Recipes Button:** Takes you to a section where you can explore different recipes.
+- **Responsive Design:** The app is designed to be fully responsive, adapting to different screen sizes.
+- **Fast Refresh:** Built with **Vite** for rapid development and testing.
+  
+## Technologies Used
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: Fast development and build tool for modern web projects.
+- **CSS**: For styling and layout of the app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/cook.git
