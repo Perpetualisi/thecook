@@ -18,7 +18,7 @@ Welcome to the **TheCook** recipe app, where you can explore and discover a vari
 ## Live Demo
 
 You can check out the live demo of the app here:  
-[Cook Recipe App - Live Demo](https://magnificent-cupcake-e7c695.netlify.app/)
+[Cook Recipe App - Live Demo](https://thecook-alpha.vercel.app/)
 
 ## Installation
 
