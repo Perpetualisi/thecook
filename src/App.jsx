@@ -6,9 +6,8 @@ import Store from './Components/Store/Store';
 import { Route, Routes } from 'react-router-dom'; 
 import Recipes from './Components/Recipes/Recipes'; 
 import Aboutus from './Components/Aboutus/Aboutus'; 
-
 import Contact from './Components/Contact/Contact'; 
-
+import './App.css';
 const App = () => {
   return (
     <div>
