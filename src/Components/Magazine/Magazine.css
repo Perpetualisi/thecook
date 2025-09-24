@@ -1,66 +1,93 @@
 .magazine {
-  padding: 4rem 1rem;
-  background: linear-gradient(to right, #f7f7f7, #fff);
+  padding: 5rem 1.5rem;
+  background: linear-gradient(to right, #fafafa, #fff);
   text-align: center;
-  transition: background 0.3s ease;
 }
 
 .magazine-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .magazine-header h1 {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #222;
   letter-spacing: 0.5px;
 }
 
 .magazine-header .intro {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.15rem;
+  color: #555;
   margin-top: 0.75rem;
-  max-width: 600px;
+  max-width: 650px;
   margin-inline: auto;
+  line-height: 1.6;
 }
 
 .magazine-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
 }
 
 .magazine-item {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   display: flex;
   flex-direction: column;
 }
 
 .magazine-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.magazine-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
 }
 
 .magazine-image {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.magazine-item:hover .magazine-image {
+  transform: scale(1.08);
+}
+
+.magazine-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.magazine-item:hover .magazine-overlay {
+  opacity: 1;
 }
 
 .magazine-text {
-  padding: 1.5rem;
+  padding: 1.6rem;
   text-align: left;
 }
 
 .magazine-text h2 {
   font-size: 1.6rem;
   color: #111;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
 }
 
 .magazine-text p {
@@ -69,21 +96,19 @@
   line-height: 1.6;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .magazine-header h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
   .magazine-header .intro {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .magazine-header h1 {
     font-size: 1.8rem;
-  }
-  .magazine-header .intro {
-    font-size: 1rem;
   }
   .magazine-text h2 {
     font-size: 1.3rem;

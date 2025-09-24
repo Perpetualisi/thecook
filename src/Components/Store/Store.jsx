@@ -1,44 +1,57 @@
-import React from 'react';
-import './Store.css';
+// Store.jsx
+import React from "react";
+import "./Store.css";
+
+const products = [
+  {
+    id: 1,
+    title: "Premium Chef Knife",
+    description:
+      "Crafted from high-quality stainless steel, this knife offers durability and precision—ideal for both professional chefs and home cooks.",
+    image: "/knife.jpg",
+  },
+  {
+    id: 2,
+    title: "Cast Iron Skillet",
+    description:
+      "Perfect for searing, sautéing, baking, and frying. Its heat retention and even cooking make it a kitchen essential.",
+    image: "/Skillet.jpg",
+  },
+  {
+    id: 3,
+    title: "Gourmet Spice Set",
+    description:
+      "A variety of hand-picked, high-quality spices from around the world. Add flavor and depth to your dishes!",
+    image: "/GourmetSpiceSet.jpg",
+  },
+];
 
 const Store = () => {
   return (
-    <div className="store">
-      <h1>Welcome to Our Store</h1>
-      <p>
-        Explore our wide range of products. From kitchen essentials to gourmet spices,
-        we have everything to elevate your cooking experience!
-      </p>
+    <section className="store">
+      <header className="store-header">
+        <h1>Welcome to Our Store</h1>
+        <p>
+          Explore our wide range of products—from kitchen essentials to gourmet
+          spices. Everything you need to elevate your cooking experience!
+        </p>
+      </header>
 
       <div className="products">
-        <div className="product">
-          <h2>Premium Chef Knife</h2>
-          <p>
-            Crafted from high-quality stainless steel, this knife offers durability and
-            precision—ideal for both professional chefs and home cooks.
-          </p>
-          <img src="/knife.jpg" alt="Premium Chef Knife" />
-        </div>
-
-        <div className="product">
-          <h2>Cast Iron Skillet</h2>
-          <p>
-            Perfect for searing, sautéing, baking, and frying. Its heat retention and
-            even cooking make it a kitchen essential.
-          </p>
-          <img src="/Skillet.jpg" alt="Cast Iron Skillet" />
-        </div>
-
-        <div className="product">
-          <h2>Gourmet Spice Set</h2>
-          <p>
-            A variety of hand-picked, high-quality spices from around the world. Add
-            flavor and depth to your dishes!
-          </p>
-          <img src="/GourmetSpiceSet.jpg" alt="Gourmet Spice Set" />
-        </div>
+        {products.map((item) => (
+          <div key={item.id} className="product">
+            <div className="product-image">
+              <img src={item.image} alt={item.title} />
+            </div>
+            <div className="product-info">
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+              {/* <button className="buy-btn">Shop Now</button> */}
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

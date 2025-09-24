@@ -8,6 +8,7 @@ import Recipes from './Components/Recipes/Recipes';
 import Aboutus from './Components/Aboutus/Aboutus'; 
 import Contact from './Components/Contact/Contact'; 
 import './App.css';
+import './index.css';
 const App = () => {
   return (
     <div>

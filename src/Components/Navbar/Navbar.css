@@ -1,120 +1,123 @@
-
+/* Base Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: darkslategrey;
-    color: white;
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    max-width: 100%;
-    box-sizing: border-box; 
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #013220; /* Dark greenish tone */
+  color: white;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  height:65px ;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 
-  .navbar .logo h1 {
-    font-size: 1.8rem;
-    margin: 0;
-  }
-  
-  
-  .nav-links {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%; 
-    justify-content: flex-end; 
-  }
-  
-  .nav-links li {
-    margin-right: 20px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-  }
-  
-  .nav-links li a:hover {
-    color: #f39c12;
-  }
-  
-  
+/* Logo */
+.logo-link {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #f39c12;
+}
+
+/* Nav Links (Desktop) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 20px;
+  width: 25px;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Animate Hamburger to X */
+.menu-icon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
   .menu-icon {
-    display: none; 
+    display: flex;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    height: 20px;
-    width: 25px;
+    background: #013220;
+    text-align: center;
+    display: none;
+    padding: 25px 0;
+    gap: 20px;
+    animation: slideDown 0.3s ease forwards;
   }
-  
-  .menu-icon .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+
+  .nav-links.active {
+    display: flex;
   }
-  
-  
-  .menu-icon.open .bar:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 7px;
+
+  .nav-links li a {
+    font-size: 1.3rem;
+    font-weight: 600;
   }
-  
-  .menu-icon.open .bar:nth-child(2) {
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from {
     opacity: 0;
+    transform: translateY(-15px);
   }
-  
-  .menu-icon.open .bar:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    bottom: 7px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: flex; 
-      margin-left: auto; 
-    }
-  
-    .navbar {
-      height: 60px; 
-      padding: 10px 15px;
-    }
-  
-    .nav-links {
-      display: none; 
-      width: 100%;
-      flex-direction: column;
-      text-align: center;
-      background-color: darkslategrey; 
-      position: absolute;
-      top: 60px;  
-      left: 0;
-      padding: 20px 0;
-      z-index: 10;
-    }
-  
-    .nav-links.active {
-      display: flex; 
-    }
-  
-    .nav-links li {
-      margin: 15px 0;
-    }
-  
-    .nav-links li a {
-      font-size: 1.5rem;
-    }
-  }
-  
+}
