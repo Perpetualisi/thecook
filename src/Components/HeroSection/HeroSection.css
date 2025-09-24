@@ -1,4 +1,6 @@
-/* Reset + smooth scroll */
+/* =========================
+   Reset + Smooth Scroll
+========================= */
 body,
 html {
   margin: 0;
@@ -8,13 +10,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* =========================
+   Hero Section
+========================= */
 .hero {
   display: flex;
-  height: 100vh;
+  min-height: 100vh; /* flexible instead of fixed height */
+  height: auto;
   background: #001f1f;
   color: white;
   position: relative;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .hero-overlay {
@@ -31,7 +38,9 @@ html {
   z-index: 1;
 }
 
-/* Left image side */
+/* =========================
+   Left Image Side
+========================= */
 .hero-left {
   flex: 1;
   position: relative;
@@ -59,7 +68,9 @@ html {
   }
 }
 
-/* Right content side */
+/* =========================
+   Right Content Side
+========================= */
 .hero-right {
   flex: 1;
   padding: 4rem;
@@ -76,6 +87,7 @@ html {
   line-height: 1.3;
   margin-bottom: 1rem;
   color: #fffbea;
+    word-break: break-word; /* prevent overflow */
 }
 
 .hero-right h1 span {
@@ -89,7 +101,9 @@ html {
   color: #e0e0e0;
 }
 
-/* Call-to-action button */
+/* =========================
+   Call-to-action button
+========================= */
 .cta {
   background: linear-gradient(135deg, goldenrod, #ffb400);
   color: white;
@@ -109,7 +123,9 @@ html {
   background: linear-gradient(135deg, #daa520, #ff9c00);
 }
 
-/* Animated arrow */
+/* =========================
+   Animated Arrow
+========================= */
 .arrow {
   font-size: 2.2rem;
   margin-top: 2rem;
@@ -126,22 +142,46 @@ html {
   }
 }
 
-/* Responsive design */
+/* =========================
+   Responsive Design
+========================= */
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  .hero-right {
+    padding: 3rem;
+  }
+
+  .hero-right h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-right p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+}
+
+/* Small tablets & phones */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    height: auto;
+    min-height: auto; /* let content define height */
   }
 
   .hero-left {
     order: 2;
     width: 100%;
-    height: 300px;
+    height: 250px; /* keeps image smaller */
   }
 
   .hero-right {
     order: 1;
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
     text-align: center;
   }
 
@@ -156,9 +196,18 @@ html {
   .cta {
     margin: 0 auto;
   }
+
+  .arrow {
+    margin: 1.5rem auto 0;
+  }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
+  .hero-left {
+    height: 200px; /* smaller image height */
+  }
+
   .hero-right h1 {
     font-size: 1.7rem;
   }
@@ -168,7 +217,30 @@ html {
   }
 
   .cta {
-    padding: 0.9rem 1.6rem;
-    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .arrow {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .hero-right h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem); /* scale font responsively */
+    line-height: 1.2;
+    max-width: 100%;
+    text-wrap: balance; /* modern browsers: balances words across lines */
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero-right h1 {
+    font-size: clamp(1.4rem, 6vw, 1.7rem);
+    line-height: 1.2;
+    text-wrap: balance;
   }
 }
