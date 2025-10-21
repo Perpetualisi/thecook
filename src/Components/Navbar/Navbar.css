@@ -3,12 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #013220; /* Dark greenish tone */
+  background: black; 
   color: white;
   padding: 15px 20px;
   position: fixed;
   top: 0;
-  height:65px ;
+  height:60px ;
   width: 100%;
   z-index: 1000;
   box-sizing: border-box;
@@ -85,14 +85,13 @@
     display: flex;
     z-index: 1100;
   }
-
   .nav-links {
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
     flex-direction: column;
-    background: #013220;
+    background: #000;
     text-align: center;
     display: none;
     padding: 25px 0;
